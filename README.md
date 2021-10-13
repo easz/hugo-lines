@@ -1,6 +1,6 @@
 # Lines
 
-Lines is a minimalistic Hugo blogging theme.
+A minimalistic Hugo blogging theme forked from [lines](https://github.com/ronv/lines).
 
 ### Demo: [https://lines-hugo-theme.netlify.app/](https://lines-hugo-theme.netlify.app/)
 
@@ -21,6 +21,3 @@ Lines is a minimalistic Hugo blogging theme.
 - Seo optimized (Twitter cards, Facebook Open Graph, Schema.org)
 - Ultra fast (Only ~2kb of CSS)
 
-### Screenshot
-
-![Screenshot](screenshot.png)

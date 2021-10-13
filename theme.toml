@@ -1,0 +1,27 @@
+# theme.toml template for a Hugo theme
+# See  https://github.com/gohugoio/hugoThemesSiteBuilder#theme-configuration for an example
+
+name = "hugo-lines"
+license = "MIT"
+licenselink = ""
+description = ""
+
+# The home page of the theme, where the source can be found.
+homepage = "https://github.com/easz/hugo-lines"
+
+# If you have a running demo of the theme.
+demosite = ""
+
+tags = ["minimal", "blog"]
+features = []
+
+# If the theme has a single author
+[author]
+    name = "easz"
+    homepage = ""
+
+# If porting an existing theme
+[original]
+    author = "Ronalds Vilciņš"
+    homepage = "https://www.ronaldsvilcins.com/"
+    repo = "https://github.com/ronv/lines"
