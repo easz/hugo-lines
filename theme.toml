@@ -3,25 +3,31 @@
 
 name = "hugo-lines"
 license = "MIT"
-licenselink = ""
-description = ""
+licenselink = "https://raw.githubusercontent.com/easz/hugo-lines/master/LICENSE.md"
+description = "A minimalistic Hugo blogging theme"
 
 # The home page of the theme, where the source can be found.
 homepage = "https://github.com/easz/hugo-lines"
 
 # If you have a running demo of the theme.
-demosite = ""
+demosite = "https://lines-hugo-theme.netlify.app/"
 
 tags = ["minimal", "blog"]
 features = []
 
-# If the theme has a single author
-[author]
-    name = "easz"
-    homepage = ""
+# If the theme has multiple authors
+authors = [
+  {name = "Ronalds Vilciņš", homepage = "https://www.ronaldsvilcins.com/"},
+  {name = "easz", homepage = "https://github.com/easz/"}
+]
 
 # If porting an existing theme
 [original]
     author = "Ronalds Vilciņš"
     homepage = "https://www.ronaldsvilcins.com/"
     repo = "https://github.com/ronv/lines"
+
+
+[module]
+  [module.hugoVersion]
+    extended = true

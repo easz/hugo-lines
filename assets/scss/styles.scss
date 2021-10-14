@@ -46,12 +46,10 @@ a, body {
 	margin-left: 1rem;
 }
 
-code,pre {
-	color: #353535;
+code, pre {
 	font-family: San Francisco Mono,Monaco,"Consolas","Lucida Console","DejaVu Sans Mono","Bitstream Vera Sans Mono",monospace;
-	font-size: normal;
 	border: 1px solid #353535;
-    font-size: small;
+  font-size: small;
 }
 
 code {
@@ -65,7 +63,7 @@ pre {
 }
 
 pre code {
-	border: none;
+  border: none;
 }
 
 img {
@@ -84,7 +82,7 @@ ul {
 }
 
 ul, ol {
-	padding-left: 1.2rem; 
+	padding-left: 1.2rem;
 }
 
 header li, footer li {
