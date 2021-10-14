@@ -1,18 +1,21 @@
-  <header>
-    <nav>
-      {{ $current := . }}
-  <ul>{{ range .Site.Menus.main }}
-    <li>
-      {{ $active := or ($current.IsMenuCurrent "main" .) ($current.HasMenuCurrent "main" .) }}
-      {{ $active = or $active (eq .Name $current.Title) }}
-      {{ $active = or $active (and (eq .Name "Index") (eq $current.Section "posts")) }}
-      {{ $active = or $active (and (eq .Name "Projects") (eq $current.Section "projects")) }}
-      <a href="{{ .URL }}" {{ if $active }}aria-current="page"{{ end }}>{{ .Name }}</a>
-    </li>
+<header>
+  <nav>
+  <h1>{{ $.Site.Title }}</h1>
+  {{ $isHome := .IsHome }}
+  {{ $current := . }}
+  <ul>
+  {{ range .Site.Menus.main }}
+  <li>
+    {{ $active := or ($current.IsMenuCurrent "main" .) ($current.HasMenuCurrent "main" .) }}
+    {{ $active = or $active (eq .Name $current.Title) }}
+    <!-- menu -->
+    {{ $active = or $active (and (eq .Identifier "index") ($isHome)) }}
+    {{ $active = or $active (and (eq .Identifier "index") (eq $current.Section "posts")) }}
+    <a href="{{ .URL }}" {{ if $active }}aria-current="page"{{ end }}>{{ .Name }}</a>
+    {{ if $active }}⇠{{ end }}
+  </li>
   {{ end }}
   </ul>
-    </nav>
-  </header>
-  <hr>
-
+  </nav>
+</header>
 

@@ -1,40 +1,52 @@
-*,:after,:before {
-	box-sizing:border-box;
-	/*margin:0;*/
-	padding:0;
+$major-color: #111;
+$secondary-color: #353535;
+$secondary-color-inverted: #fff;
+
+:root {
+  --mono-font: San Francisco Mono, Monaco, "Consolas", "Lucida Console", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", monospace;
+  --sans-font: -apple-system, BlinkMacSystemFont, "avenir next", avenir, helvetica, "helvetica neue", ubuntu, roboto, noto, "segoe ui", arial, sans-serif;
+}
+
+*, :after, :before {
+	box-sizing: border-box;
+	padding: 0;
 }
 
 body {
-	font: 1rem/1.5 -apple-system,BlinkMacSystemFont,"avenir next",avenir,helvetica,"helvetica neue",ubuntu,roboto,noto,"segoe ui",arial,sans-serif;
-	text-rendering:optimizeSpeed;
+  text-rendering: optimizeLegibility;
+  line-height: 1.6;
+  font-size: 1rem;
+  font-family: var(--sans-font);
+  color: $major-color;
 }
+
 
 .posts hr {
 	margin-top: 0;
-    margin-bottom: 0;
-    margin-right: .5rem;
-    margin-left: .5rem;
-    height: 1px;
-    border: none;
-    border-bottom: 1px #353535;
-    flex: 1 0 1rem;
-    //opacity: .25;
+  margin-bottom: 0;
+  margin-right: .5rem;
+  margin-left: .5rem;
+  height: 1px;
+  border: none;
+  border-bottom: 1px $secondary-color;
+  flex: 1 0 1rem;
 }
 
-
 main {
-	max-width: 70ch;
-	padding: 2ch;
+	max-width: 90ch;
+	padding: 1ch;
 	margin: auto;
 }
 
-a, body {
-	color: #353535;
+a {
+  color: inherit;
+  font-weight: 500;
+  letter-spacing: -.015em;
 }
 
 ::selection, a:focus, a:hover {
-	background-color: #353535;
-	color: #fff;
+	background-color: $secondary-color;
+	color: $secondary-color-inverted;
 }
 
 .meta {
@@ -47,8 +59,7 @@ a, body {
 }
 
 code, pre {
-	font-family: San Francisco Mono,Monaco,"Consolas","Lucida Console","DejaVu Sans Mono","Bitstream Vera Sans Mono",monospace;
-	border: 1px solid #353535;
+	border: 1px solid $secondary-color;
   font-size: small;
 }
 
@@ -68,13 +79,13 @@ pre code {
 
 img {
 	max-width:100%;
-	border: 1px solid #353535;
+	border: 1px solid $secondary-color;
 }
 
 hr {
-	background: #353535;
-    height: 1px;
-    border: 0;
+	background: $secondary-color;
+  height: 1px;
+  border: 0;
 }
 
 ul {
@@ -85,34 +96,83 @@ ul, ol {
 	padding-left: 1.2rem;
 }
 
-header li, footer li {
-    display: inline;
-    text-transform: uppercase;
+header {
+  position: absolute;
+  top: 40px;
+  right: 95ch;
+  margin-right: 510px !important;
+  letter-spacing: -.009em;
+  min-width: 10ch;
 }
 
 header a, footer a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
-header ul, footer ul {
-    justify-content: space-between;
-    display: flex;
+header h1 {
+  font-size: 1.1rem;
+}
+
+header ul {
+  list-style: none;
+}
+
+
+footer li {
+  display: inline;
+}
+
+footer ul {
+  justify-content: space-between;
+  display: flex;
 }
 
 
 [aria-current="page"] {
-	//font-weight: bold;
-	text-decoration: line-through;
 }
 
 header,section, footer {
-	padding:1rem 0;
+	padding: 0.5rem 0;
 }
 
-blockquote {
-    border-left: 5px solid #353535;
-    padding-left: 1rem;
+.pagination {
+  display: flex;
+  list-style: none;
+  margin: 0px 10px 30px 10px;
+  padding: 0;
+  justify-content: center;
 }
+
+.page-item a {
+  text-decoration: none;
+  font-weight: 300;
+}
+
+.page-link {
+  position: relative;
+  display: block;
+  padding: 0.3rem;
+  line-height: 1.25;
+  border: 1px solid #dee2e6;
+}
+
+.page-item.disabled .page-link {
+  color: #dee2e6;
+  pointer-events: none;
+  cursor: auto;
+}
+
+.page-item.active .page-link {
+  z-index: 1;
+  border-color: $secondary-color;
+}
+
+
+blockquote {
+  border-left: 5px solid $secondary-color;
+  padding-left: 1rem;
+}
+
 .posts ul,header ul, footer ul {
 	list-style:none;
 }
@@ -125,7 +185,7 @@ blockquote {
 	align-items:center;
 	display:flex;
 	justify-content:space-between;
-    margin-bottom: .7rem;
+  margin-bottom: .7rem;
 }
 
 .posts li a, .posts li div {
@@ -148,14 +208,14 @@ blockquote {
 
 
 table {
-    border-collapse: collapse;
-    text-align: left;
-    width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  width: 100%;
 }
 table tr {
-    background: white;
-    border-bottom: 1px solid
+  background: white;
+  border-bottom: 1px solid
 }
 table th, table td {
-    padding: 10px 20px;
+  padding: 10px 20px;
 }
